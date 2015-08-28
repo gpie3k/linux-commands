@@ -10,3 +10,7 @@ sudo vi /etc/cntlm.conf
 
 sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) Downloads /media/sf_Downloads
 
+### Kill JAVA
+
+ps -ef | grep java | grep -v grep | awk '{print $2}' | xargs -r kill -9
+
