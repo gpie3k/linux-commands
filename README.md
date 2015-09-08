@@ -18,6 +18,6 @@ ps -ef | grep java | grep -v grep | awk '{print $2}' | xargs -r kill -9
 
 ```
 Host github.com
-  Hostname ssh.github.com
-  Port 443
+    Hostname github.com
+    ProxyCommand localhost 3128 %h %p [auth-file]
 ```
