@@ -19,5 +19,5 @@ ps -ef | grep java | grep -v grep | awk '{print $2}' | xargs -r kill -9
 ```
 Host github.com
     Hostname github.com
-    ProxyCommand localhost 3128 %h %p [auth-file]
+    ProxyCommand corkscrew localhost 3128 %h %p /home/gpie3k/.corkscrew-auth
 ```
