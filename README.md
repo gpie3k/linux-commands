@@ -6,11 +6,11 @@ cntlm -u USER -d DOMAIN -H
 
 sudo vi /etc/cntlm.conf
 
-VBoxManage modifyvm VMNAME --natdnshostresolver1 on
-
 ### VBOX
 
 sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) Downloads /media/sf_Downloads
+
+VBoxManage modifyvm VMNAME --natdnshostresolver1 on
 
 ### Kill JAVA
 
