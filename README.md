@@ -19,7 +19,9 @@ ps -ef | grep java | grep -v grep | awk '{print $2}' | xargs -r kill -9
 ### github proxy
 
 ```
-Host github.com
-    Hostname github.com
-    ProxyCommand corkscrew localhost 3128 %h %p /home/gpie3k/.corkscrew-auth
+host github.com
+    user git
+    hostname github.com
+    port 22
+    proxycommand socat - PROXY:localhost:%h:%p,proxyport=3128,proxyauth=:
 ```
