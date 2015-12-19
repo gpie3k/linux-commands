@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
+
 confirm () {
     # call with a prompt string or use a default
     read -r -p "${1:-Are you sure?} [Y/n] " response
