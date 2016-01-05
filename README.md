@@ -16,7 +16,7 @@ sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) Downloads /media/sf_Downloads
 ```
 wmic diskdrive list brief 
 
-VBoxManage internalcommands createrawvmdk -filename c:\Users\sg0897499\.VirtualBox\PLEXTOR.vmdk -rawdisk \\.\PHYSICALDRIVE1
+VBoxManage internalcommands createrawvmdk -filename c:\PLEXTOR.vmdk -rawdisk \\.\PHYSICALDRIVE1
 
 VBoxManage modifyvm "Ubuntu" --natdnshostresolver1 on
 ```
